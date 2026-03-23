@@ -254,7 +254,7 @@
             border: 0;
         }
 
-        /* === 菜单分类导航栏 === */
+        /* === 菜单分类导航栏 - 方案二：圆润药丸风 === */
         .menu-tabs {
             display: flex;
             flex-wrap: wrap;
@@ -425,6 +425,35 @@
             color: #1a1a1a;
             text-decoration: none;
         }
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            font-family: inherit;
+        }
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: #c41e3a;
+        }
+        .contact-form button {
+            background: linear-gradient(135deg, #c41e3a, #8b0000);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s;
+            width: 100%;
+        }
+        .contact-form button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(196,30,58,0.3);
+        }
         .map-container {
             grid-column: span 2;
             height: 350px;
@@ -479,6 +508,87 @@
         }
         .close-btn:hover {
             color: #c41e3a;
+        }
+
+        /* === 新增样式 === */
+        /* 搜索框样式 */
+        .menu-search {
+            max-width: 400px;
+            margin: 0 auto 2rem auto;
+        }
+        .menu-search input {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-family: inherit;
+            transition: all 0.3s;
+        }
+        .menu-search input:focus {
+            outline: none;
+            border-color: #c41e3a;
+            box-shadow: 0 0 0 3px rgba(196,30,58,0.1);
+        }
+        .menu-search input::placeholder {
+            color: #999;
+        }
+        
+        /* 返回顶部按钮 */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #c41e3a, #8b0000);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 24px;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            z-index: 99;
+        }
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        .back-to-top:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(196,30,58,0.4);
+        }
+        
+        /* 加载状态 */
+        .menu-loading {
+            text-align: center;
+            padding: 3rem;
+            color: #c41e3a;
+            font-size: 1.1rem;
+        }
+        
+        /* 无结果提示 */
+        .no-results {
+            text-align: center;
+            padding: 3rem;
+            color: #666;
+            font-size: 1.1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .back-to-top {
+                bottom: 20px;
+                right: 20px;
+                width: 40px;
+                height: 40px;
+                font-size: 20px;
+            }
+            .menu-search {
+                margin: 0 auto 1.5rem auto;
+            }
         }
 
         /* === 响应式 === */
@@ -559,15 +669,22 @@
         <section id="menu" class="container">
             <div class="section-title"><h2>菜单</h2><div class="sub">MENU</div></div>
             
+            <!-- 添加搜索框 -->
+            <div class="menu-search">
+                <input type="text" id="menuSearch" placeholder="🔍 搜索菜品... (支持中英文)" autocomplete="off">
+            </div>
+            
             <div class="menu-tabs" id="menuTabs"></div>
-            <div class="menu-section" id="menuSection"></div>
+            <div class="menu-section" id="menuSection">
+                <div class="menu-loading">加载菜单中...</div>
+            </div>
         </section>
 
-        <!-- 视频区域 -->
+        <!-- 视频区域 - 添加 rel=0 优化 -->
         <section id="video" class="video-section">
             <div class="container">
                 <div class="section-title"><h2>餐厅视频</h2><div class="sub">RESTAURANT VIDEO</div></div>
-                <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/imqJgmQbU6A?t=4" title="餐厅视频" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/imqJgmQbU6A?t=4&rel=0" title="餐厅视频" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
             </div>
         </section>
 
@@ -615,6 +732,9 @@
         <span class="close-btn">&times;</span>
         <img class="modal-content" id="modalImage">
     </div>
+
+    <!-- 添加返回顶部按钮 -->
+    <button class="back-to-top" id="backToTop" aria-label="返回顶部">↑</button>
 
     <script>
         // ==================== 菜单数据 JSON 格式 ====================
@@ -875,18 +995,41 @@
             ]
         };
 
+        let currentSearchTerm = '';
+        
         // 渲染菜单
-        function renderMenu() {
+        function renderMenu(searchTerm = '') {
             const menuTabs = document.getElementById('menuTabs');
             const menuSection = document.getElementById('menuSection');
             
+            // 如果有搜索词，过滤菜品
+            let filteredCategories = menuData.categories;
+            if (searchTerm.trim()) {
+                const term = searchTerm.toLowerCase().trim();
+                filteredCategories = menuData.categories.map(cat => ({
+                    ...cat,
+                    items: cat.items.filter(item => 
+                        item.nameEn.toLowerCase().includes(term) ||
+                        item.nameZh.toLowerCase().includes(term) ||
+                        item.number.includes(term)
+                    )
+                })).filter(cat => cat.items.length > 0);
+            }
+            
+            // 无结果提示
+            if (filteredCategories.length === 0) {
+                menuSection.innerHTML = '<div class="no-results">😅 没有找到相关菜品，试试其他关键词吧~</div>';
+                menuTabs.innerHTML = '';
+                return;
+            }
+            
             // 渲染分类按钮
-            menuTabs.innerHTML = menuData.categories.map((cat, index) => 
+            menuTabs.innerHTML = filteredCategories.map((cat, index) => 
                 `<button class="menu-tab ${index === 0 ? 'active' : ''}" data-category="${cat.id}">${cat.name}<span>${cat.nameEn}</span></button>`
             ).join('');
             
             // 渲染菜单内容
-            menuSection.innerHTML = menuData.categories.map(cat => `
+            menuSection.innerHTML = filteredCategories.map(cat => `
                 <div class="menu-category" id="${cat.id}">
                     <h3>${cat.name} ${cat.nameEn}</h3>
                     ${cat.items.map(item => `
@@ -923,13 +1066,27 @@
             });
             
             // 默认显示第一个分类
-            showCategory(menuData.categories[0].id);
+            if (filteredCategories.length > 0) {
+                showCategory(filteredCategories[0].id);
+            }
         }
         
-        // 页面加载完成后执行
         document.addEventListener('DOMContentLoaded', function() {
             // 渲染菜单
             renderMenu();
+            
+            // 菜单搜索功能
+            const searchInput = document.getElementById('menuSearch');
+            if (searchInput) {
+                let debounceTimer;
+                searchInput.addEventListener('input', function() {
+                    clearTimeout(debounceTimer);
+                    debounceTimer = setTimeout(() => {
+                        currentSearchTerm = this.value;
+                        renderMenu(currentSearchTerm);
+                    }, 300);
+                });
+            }
             
             // 轮播图功能
             const track = document.getElementById('carouselTrack');
@@ -956,6 +1113,32 @@
                 carousel.addEventListener('mouseenter', () => clearInterval(autoPlay));
                 carousel.addEventListener('mouseleave', () => { autoPlay = setInterval(() => { currentIndex = (currentIndex + 1) % slideCount; updateCarousel(); }, 5000); });
             }
+            
+            // 返回顶部按钮功能
+            const backToTop = document.getElementById('backToTop');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    backToTop.classList.add('show');
+                } else {
+                    backToTop.classList.remove('show');
+                }
+            });
+            backToTop.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+            
+            // 平滑滚动：导航栏点击平滑滚动到对应区域
+            document.querySelectorAll('.nav-links a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
             
             // 图片放大功能
             const modal = document.getElementById('imageModal');
