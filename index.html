@@ -254,7 +254,7 @@
             border: 0;
         }
 
-        /* === 菜单分类导航栏 - 方案二：圆润药丸风 === */
+        /* === 菜单分类导航栏 === */
         .menu-tabs {
             display: flex;
             flex-wrap: wrap;
@@ -425,35 +425,6 @@
             color: #1a1a1a;
             text-decoration: none;
         }
-        .contact-form input,
-        .contact-form textarea {
-            width: 100%;
-            padding: 1rem;
-            margin-bottom: 1rem;
-            border: 2px solid #e0e0e0;
-            border-radius: 12px;
-            font-family: inherit;
-        }
-        .contact-form input:focus,
-        .contact-form textarea:focus {
-            outline: none;
-            border-color: #c41e3a;
-        }
-        .contact-form button {
-            background: linear-gradient(135deg, #c41e3a, #8b0000);
-            color: white;
-            border: none;
-            padding: 1rem 2rem;
-            font-weight: 600;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: all 0.3s;
-            width: 100%;
-        }
-        .contact-form button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(196,30,58,0.3);
-        }
         .map-container {
             grid-column: span 2;
             height: 350px;
@@ -588,378 +559,8 @@
         <section id="menu" class="container">
             <div class="section-title"><h2>菜单</h2><div class="sub">MENU</div></div>
             
-            <div class="menu-tabs">
-                <button class="menu-tab active" data-category="toupan">头盘</button>
-                <button class="menu-tab" data-category="tang">汤</button>
-                <button class="menu-tab" data-category="zhaopai">召牌</button>
-                <button class="menu-tab" data-category="tuijian">推荐</button>
-                <button class="menu-tab" data-category="gongbao">宫保</button>
-                <button class="menu-tab" data-category="gulao">古老</button>
-                <button class="menu-tab" data-category="kali">咖喱</button>
-                <button class="menu-tab" data-category="shishui">什水</button>
-                <button class="menu-tab" data-category="sichuan">四川</button>
-                <button class="menu-tab" data-category="suanla">蒜辣</button>
-                <button class="menu-tab" data-category="shanghai">上海</button>
-                <button class="menu-tab" data-category="zhaoyan">召炎</button>
-                <button class="menu-tab" data-category="ji">鸡</button>
-                <button class="menu-tab" data-category="niu">牛</button>
-                <button class="menu-tab" data-category="daxia">大虾</button>
-                <button class="menu-tab" data-category="ya">鸭</button>
-                <button class="menu-tab" data-category="charong">叉烧</button>
-                <button class="menu-tab" data-category="mifan">米饭</button>
-                <button class="menu-tab" data-category="chaomian">炒面</button>
-                <button class="menu-tab" data-category="mifen">米粉</button>
-                <button class="menu-tab" data-category="haoyou">蚝油</button>
-                <button class="menu-tab" data-category="taihong">泰红</button>
-                <button class="menu-tab" data-category="tailv">泰绿</button>
-                <button class="menu-tab" data-category="furong">芙蓉</button>
-                <button class="menu-tab" data-category="tese">特色</button>
-                <button class="menu-tab" data-category="yingshi">英式</button>
-                <button class="menu-tab" data-category="ewai">额外</button>
-                <button class="menu-tab" data-category="yinpin">饮品</button>
-                <button class="menu-tab" data-category="taocan">套餐</button>
-            </div>
-
-            <div class="menu-section">
-                <!-- 头盘 -->
-                <div class="menu-category" id="toupan">
-                    <h3>头盘 APPETISERS</h3>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">001</span><div><div class="menu-name-en">Mixed Appetisers</div><div class="menu-name-zh">什拼</div></div></div><span class="menu-price">£10.50</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">002</span><div><div class="menu-name-en">Seaweed Special</div><div class="menu-name-zh">羊海草</div></div></div><span class="menu-price">£10.50</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">003</span><div><div class="menu-name-en">Crispy Aromatic Duck Quarter</div><div class="menu-name-zh">香酥甲1/4</div></div></div><span class="menu-price">£11.50</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">004</span><div><div class="menu-name-en">Crispy Aromatic Duck Half</div><div class="menu-name-zh">香酥甲1/2</div></div></div><span class="menu-price">£20.00</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">005</span><div><div class="menu-name-en">Peking Crispy Duck Quarter</div><div class="menu-name-zh">北京烤甲1/4</div></div></div><span class="menu-price">£12.50</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">006</span><div><div class="menu-name-en">Peking Crispy Duck Half</div><div class="menu-name-zh">北京烤甲1/2</div></div></div><span class="menu-price">£23.00</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">007</span><div><div class="menu-name-en">Crispy Seaweed</div><div class="menu-name-zh">海草</div></div></div><span class="menu-price">£5.00</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">008</span><div><div class="menu-name-en">Sesame Prawn on Toast</div><div class="menu-name-zh">虾多士</div></div></div><span class="menu-price">£6.00</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">009</span><div><div class="menu-name-en">Spring Roll</div><div class="menu-name-zh">春卷</div></div></div><span class="menu-price">£3.20</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">010</span><div><div class="menu-name-en">Vegetarian Mini Rolls (6)</div><div class="menu-name-zh">斋春卷 (6)</div></div></div><span class="menu-price">£4.50</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">011</span><div><div class="menu-name-en">Deep Fried Squid</div><div class="menu-name-zh">炸鱿鱼</div></div></div><span class="menu-price">£6.50</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">012</span><div><div class="menu-name-en">Capital Spare Ribs of Pork</div><div class="menu-name-zh">京骨</div></div></div><span class="menu-price">£7.20</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">013</span><div><div class="menu-name-en">Spare Ribs with BBQ Sauce</div><div class="menu-name-zh">BBQ骨</div></div></div><span class="menu-price">£7.00</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">014</span><div><div class="menu-name-en">Spare Ribs with Sweet & Sour Sauce</div><div class="menu-name-zh">古老骨</div></div></div><span class="menu-price">£7.00</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">015</span><div><div class="menu-name-en">Fried Spare Ribs (Dry)</div><div class="menu-name-zh">干骨</div></div></div><span class="menu-price">£6.50</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">016</span><div><div class="menu-name-en">Fried Chicken Wings (Dry)</div><div class="menu-name-zh">干介翅</div></div></div><span class="menu-price">£6.00</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">017</span><div><div class="menu-name-en">Golden Butterfly King Prawns</div><div class="menu-name-zh">蝴蝶大虾</div></div></div><span class="menu-price">£7.00</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">018</span><div><div class="menu-name-en">Fried Chicken in Breadcrumbs</div><div class="menu-name-zh">炸介</div></div></div><span class="menu-price">£7.00</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">019</span><div><div class="menu-name-en">Chicken Satay on Skewer</div><div class="menu-name-zh">沙爹介串</div></div></div><span class="menu-price">£7.00</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">020</span><div><div class="menu-name-en">Deep Fried Stuffed Crab Claws (4)</div><div class="menu-name-zh">炸蟹爪 (4)</div></div></div><span class="menu-price">£5.30</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">021</span><div><div class="menu-name-en">Crispy Curry Puffs (10)</div><div class="menu-name-zh">咖喱角 (10)</div></div></div><span class="menu-price">£4.80</span></div>
-                </div>
-
-                <!-- 汤 -->
-                <div class="menu-category" id="tang">
-                    <h3>汤 SOUPS</h3>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">022</span><div><div class="menu-name-en">Hot & Sour Soup</div><div class="menu-name-zh">酸辣汤</div></div></div><span class="menu-price">£4.50</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">023</span><div><div class="menu-name-en">Chicken & Sweet Corn Soup</div><div class="menu-name-zh">鸡米汤</div></div></div><span class="menu-price">£3.90</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">024</span><div><div class="menu-name-en">Chicken & Mushroom Soup</div><div class="menu-name-zh">蘑菇鸡汤</div></div></div><span class="menu-price">£3.90</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">025</span><div><div class="menu-name-en">Chicken & Noodle Soup</div><div class="menu-name-zh">鸡面汤</div></div></div><span class="menu-price">£3.90</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">026</span><div><div class="menu-name-en">Crab Meat & Sweet Corn Soup</div><div class="menu-name-zh">蟹米汤</div></div></div><span class="menu-price">£4.30</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">027</span><div><div class="menu-name-en">Won Ton Soup</div><div class="menu-name-zh">云吞汤</div></div></div><span class="menu-price">£4.50</span></div>
-                </div>
-
-                <!-- 召牌 -->
-                <div class="menu-category" id="zhaopai">
-                    <h3>召牌 HOUSE SPECIAL</h3>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">028</span><div><div class="menu-name-en">House Special with Green Peppers</div><div class="menu-name-zh">召牌绿椒</div></div></div><span class="menu-price">£7.30</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">029</span><div><div class="menu-name-en">House Special with Cashewnuts</div><div class="menu-name-zh">召牌夭果</div></div></div><span class="menu-price">£7.30</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">030</span><div><div class="menu-name-en">House Special with Mushrooms</div><div class="menu-name-zh">召牌毛古</div></div></div><span class="menu-price">£7.30</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">031</span><div><div class="menu-name-en">House Special with Mixed Vegetables</div><div class="menu-name-zh">召牌什才</div></div></div><span class="menu-price">£7.30</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">032</span><div><div class="menu-name-en">House Special with Ginger & Spring Onions</div><div class="menu-name-zh">召牌姜冲</div></div></div><span class="menu-price">£7.30</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">033</span><div><div class="menu-name-en">House Special with Black Bean Sauce</div><div class="menu-name-zh">召牌豉汁</div></div></div><span class="menu-price">£7.30</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">034</span><div><div class="menu-name-en">House Special with Yellow Bean Sauce</div><div class="menu-name-zh">召牌酱爆</div></div></div><span class="menu-price">£7.30</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">035</span><div><div class="menu-name-en">House Special with Satay Sauce</div><div class="menu-name-zh">召牌沙爹</div></div></div><span class="menu-price">£7.30</span></div>
-                </div>
-
-                <!-- 推荐 -->
-                <div class="menu-category" id="tuijian">
-                    <h3>推荐 CHEF'S SPECIAL</h3>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">036</span><div><div class="menu-name-en">Tofu in Black Bean Sauce</div><div class="menu-name-zh">豉汁豆付</div></div></div><span class="menu-price">£6.30</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">037</span><div><div class="menu-name-en">Tofu with Hot Chilli</div><div class="menu-name-zh">辣豆付</div></div></div><span class="menu-price">£6.30</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">038</span><div><div class="menu-name-en">Salt & Pepper Tofu</div><div class="menu-name-zh">召炎豆付</div></div></div><span class="menu-price">£6.30</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">039</span><div><div class="menu-name-en">Tofu with Mixed Vegetables</div><div class="menu-name-zh">什才豆付</div></div></div><span class="menu-price">£6.30</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">040</span><div><div class="menu-name-en">Steamed Pork Dumplings (6)</div><div class="menu-name-zh">蒸朱肉饺子</div></div></div><span class="menu-price">£5.50</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">041</span><div><div class="menu-name-en">Pan Fried Pork Dumplings(6)</div><div class="menu-name-zh">炸朱肉饺子</div></div></div><span class="menu-price">£5.50</span></div>
-                </div>
-
-                <!-- 宫保 -->
-                <div class="menu-category" id="gongbao">
-                    <h3>宫保 KUNG PO</h3>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">042</span><div><div class="menu-name-en">House Special with Kung Po Sauce</div><div class="menu-name-zh">召牌宫保</div></div></div><span class="menu-price">£7.30</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">043</span><div><div class="menu-name-en">Kung Po King Prawn</div><div class="menu-name-zh">宫保大虾</div></div></div><span class="menu-price">£7.70</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">044</span><div><div class="menu-name-en">Kung Po Chicken</div><div class="menu-name-zh">宫保鸡</div></div></div><span class="menu-price">£7.00</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">045</span><div><div class="menu-name-en">Kung Po Beef</div><div class="menu-name-zh">宫保牛</div></div></div><span class="menu-price">£7.00</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">046</span><div><div class="menu-name-en">Kung Po Pork</div><div class="menu-name-zh">宫保猪</div></div></div><span class="menu-price">£7.00</span></div>
-                </div>
-
-                <!-- 古老 -->
-                <div class="menu-category" id="gulao">
-                    <h3>古老 SWEET & SOUR</h3>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">047</span><div><div class="menu-name-en">Sweet & Sour King Prawn Balls(10)</div><div class="menu-name-zh">古虾球（10）</div></div></div><span class="menu-price">£7.20</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">048</span><div><div class="menu-name-en">Sweet & Sour Chicken Balls(10)</div><div class="menu-name-zh">古鸡球（10）</div></div></div><span class="menu-price">£6.20</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">049</span><div><div class="menu-name-en">Sweet & Sour Pork Balls (12)</div><div class="menu-name-zh">古猪肉球（12）</div></div></div><span class="menu-price">£6.20</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">050</span><div><div class="menu-name-en">Sweet & Sour King Prawn(Hong Kong Style)</div><div class="menu-name-zh">中古大虾</div></div></div><span class="menu-price">£7.20</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">051</span><div><div class="menu-name-en">Sweet & Sour Chicken (Hong Kong Style)</div><div class="menu-name-zh">中古鸡</div></div></div><span class="menu-price">£6.80</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">052</span><div><div class="menu-name-en">Sweet & Sour Pork (Hong Kong Style)</div><div class="menu-name-zh">中古猪</div></div></div><span class="menu-price">£6.80</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">053</span><div><div class="menu-name-en">Sweet & Sour Mixed Vegetables</div><div class="menu-name-zh">古什菜</div></div></div><span class="menu-price">£5.50</span></div>
-                </div>
-
-                <!-- 咖喱 -->
-                <div class="menu-category" id="kali">
-                    <h3>咖喱 CURRY</h3>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">054</span><div><div class="menu-name-en">Special Curry</div><div class="menu-name-zh">召牌咖喱</div></div></div><span class="menu-price">£7.20</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">055</span><div><div class="menu-name-en">King Prawn Curry</div><div class="menu-name-zh">咖喱大虾</div></div></div><span class="menu-price">£7.20</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">056</span><div><div class="menu-name-en">Prawn Curry</div><div class="menu-name-zh">咖喱虾</div></div></div><span class="menu-price">£6.40</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">057</span><div><div class="menu-name-en">Chicken Curry</div><div class="menu-name-zh">咖喱鸡</div></div></div><span class="menu-price">£6.20</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">058</span><div><div class="menu-name-en">Beef Curry</div><div class="menu-name-zh">咖喱牛</div></div></div><span class="menu-price">£6.20</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">059</span><div><div class="menu-name-en">Pork Curry</div><div class="menu-name-zh">咖喱叉烧</div></div></div><span class="menu-price">£6.20</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">060</span><div><div class="menu-name-en">Mushroom Curry</div><div class="menu-name-zh">咖喱毛古</div></div></div><span class="menu-price">£5.50</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">061</span><div><div class="menu-name-en">Mixed Vegetable Curry</div><div class="menu-name-zh">咖喱什菜</div></div></div><span class="menu-price">£5.50</span></div>
-                </div>
-
-                <!-- 什水 -->
-                <div class="menu-category" id="shishui">
-                    <h3>什水 CHOP SUEY</h3>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">062</span><div><div class="menu-name-en">Special Chop Suey</div><div class="menu-name-zh">召牌什水</div></div></div><span class="menu-price">£6.50</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">063</span><div><div class="menu-name-en">Mushroom Chop Suey</div><div class="menu-name-zh">毛古什水</div></div></div><span class="menu-price">£5.30</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">064</span><div><div class="menu-name-en">Prawn Chop Suey</div><div class="menu-name-zh">虾什水</div></div></div><span class="menu-price">£5.90</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">065</span><div><div class="menu-name-en">Beef Chop Suey</div><div class="menu-name-zh">牛什水</div></div></div><span class="menu-price">£5.90</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">066</span><div><div class="menu-name-en">Roast Pork Chop Suey</div><div class="menu-name-zh">叉烧什水</div></div></div><span class="menu-price">£5.90</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">067</span><div><div class="menu-name-en">King Prawn Chop Suey</div><div class="menu-name-zh">大虾什水</div></div></div><span class="menu-price">£7.30</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">068</span><div><div class="menu-name-en">Chicken Chop Suey</div><div class="menu-name-zh">鸡什水</div></div></div><span class="menu-price">£6.10</span></div>
-                </div>
-
-                <!-- 四川 -->
-                <div class="menu-category" id="sichuan">
-                    <h3>四川 SZECHUAN</h3>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">069</span><div><div class="menu-name-en">House Special with Szechuan Sauce</div><div class="menu-name-zh">召牌四川</div></div></div><span class="menu-price">£7.50</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">070</span><div><div class="menu-name-en">King Prawn with Szechuan Sauce</div><div class="menu-name-zh">四川大虾</div></div></div><span class="menu-price">£7.30</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">071</span><div><div class="menu-name-en">Beef with Szechuan Sauce</div><div class="menu-name-zh">四川牛</div></div></div><span class="menu-price">£6.30</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">072</span><div><div class="menu-name-en">Chicken with Szechuan Sauce</div><div class="menu-name-zh">四川鸡</div></div></div><span class="menu-price">£6.30</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">073</span><div><div class="menu-name-en">Roast Pork with Szechuan Sauce</div><div class="menu-name-zh">四川叉烧</div></div></div><span class="menu-price">£6.30</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">074</span><div><div class="menu-name-en">Roast Duck with Szechuan Sauce</div><div class="menu-name-zh">四川鸭</div></div></div><span class="menu-price">£7.70</span></div>
-                </div>
-
-                <!-- 蒜辣 -->
-                <div class="menu-category" id="suanla">
-                    <h3>蒜辣 GARLIC CHILLI</h3>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">075</span><div><div class="menu-name-en">House Special with Garlic & Chilli</div><div class="menu-name-zh">召牌蒜辣</div></div></div><span class="menu-price">£7.50</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">076</span><div><div class="menu-name-en">King Prawn with Garlic & Chilli</div><div class="menu-name-zh">蒜辣大虾</div></div></div><span class="menu-price">£7.30</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">077</span><div><div class="menu-name-en">Beef with Garlic & Chilli</div><div class="menu-name-zh">蒜辣牛</div></div></div><span class="menu-price">£6.30</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">078</span><div><div class="menu-name-en">Chicken with Garlic & Chilli</div><div class="menu-name-zh">蒜辣鸡</div></div></div><span class="menu-price">£6.30</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">079</span><div><div class="menu-name-en">Roast Pork with Garlic & Chilli</div><div class="menu-name-zh">蒜辣叉烧</div></div></div><span class="menu-price">£6.30</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">080</span><div><div class="menu-name-en">Roast Duck with Garlic & Chilli</div><div class="menu-name-zh">蒜辣鸭</div></div></div><span class="menu-price">£7.70</span></div>
-                </div>
-
-                <!-- 上海 -->
-                <div class="menu-category" id="shanghai">
-                    <h3>上海 SHANGHAI</h3>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">081</span><div><div class="menu-name-en">House Special Shanghai Style</div><div class="menu-name-zh">召牌上海</div></div></div><span class="menu-price">£7.60</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">082</span><div><div class="menu-name-en">King Prawn Shanghai Style</div><div class="menu-name-zh">上海大虾</div></div></div><span class="menu-price">£7.50</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">083</span><div><div class="menu-name-en">Beef Shanghai Style</div><div class="menu-name-zh">上海牛</div></div></div><span class="menu-price">£6.50</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">084</span><div><div class="menu-name-en">Chicken Shanghai Style</div><div class="menu-name-zh">上海鸡</div></div></div><span class="menu-price">£6.50</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">085</span><div><div class="menu-name-en">Pork Shanghai Style</div><div class="menu-name-zh">上海猪</div></div></div><span class="menu-price">£6.50</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">086</span><div><div class="menu-name-en">Duck Shanghai Style</div><div class="menu-name-zh">上海鸭</div></div></div><span class="menu-price">£7.60</span></div>
-                </div>
-
-                <!-- 召炎 -->
-                <div class="menu-category" id="zhaoyan">
-                    <h3>召炎 SALT & PEPPER</h3>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">087</span><div><div class="menu-name-en">Salt & Pepper Squid</div><div class="menu-name-zh">召炎鱿鱼</div></div></div><span class="menu-price">£7.00</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">088</span><div><div class="menu-name-en">Salt & Pepper Ribs</div><div class="menu-name-zh">召炎骨</div></div></div><span class="menu-price">£7.00</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">089</span><div><div class="menu-name-en">Salt & Pepper Chicken</div><div class="menu-name-zh">召炎鸡</div></div></div><span class="menu-price">£6.70</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">090</span><div><div class="menu-name-en">Salt & Pepper Chicken Wings</div><div class="menu-name-zh">召炎鸡翅</div></div></div><span class="menu-price">£6.10</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">091</span><div><div class="menu-name-en">Salt & Pepper King Prawn</div><div class="menu-name-zh">召炎大虾</div></div></div><span class="menu-price">£7.50</span></div>
-                </div>
-
-                <!-- 鸡 -->
-                <div class="menu-category" id="ji">
-                    <h3>鸡 CHICKEN</h3>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">092</span><div><div class="menu-name-en">Roast Chicken (Chinese Style)</div><div class="menu-name-zh">中式鸡</div></div></div><span class="menu-price">£6.20</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">093</span><div><div class="menu-name-en">Chicken with Green Peppers</div><div class="menu-name-zh">绿椒鸡</div></div></div><span class="menu-price">£6.40</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">094</span><div><div class="menu-name-en">Chicken with Cashewnuts</div><div class="menu-name-zh">腰果鸡</div></div></div><span class="menu-price">£6.80</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">095</span><div><div class="menu-name-en">Chicken with Pineapple</div><div class="menu-name-zh">菠萝鸡</div></div></div><span class="menu-price">£6.20</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">096</span><div><div class="menu-name-en">Chicken with Mushrooms</div><div class="menu-name-zh">蘑菇鸡</div></div></div><span class="menu-price">£6.20</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">097</span><div><div class="menu-name-en">Chicken with Mixed Vegetables</div><div class="menu-name-zh">什菜鸡</div></div></div><span class="menu-price">£6.30</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">098</span><div><div class="menu-name-en">Chicken with Ginger & Spring Onions</div><div class="menu-name-zh">姜葱鸡</div></div></div><span class="menu-price">£6.60</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">099</span><div><div class="menu-name-en">Chicken with Black Bean Sauce</div><div class="menu-name-zh">豉汁鸡</div></div></div><span class="menu-price">£6.60</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">100</span><div><div class="menu-name-en">Chicken with Satay Sauce</div><div class="menu-name-zh">沙爹鸡</div></div></div><span class="menu-price">£6.80</span></div>
-                </div>
-
-                <!-- 牛 -->
-                <div class="menu-category" id="niu">
-                    <h3>牛 BEEF</h3>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">101</span><div><div class="menu-name-en">Beef with Ginger & Spring Onions</div><div class="menu-name-zh">姜葱牛</div></div></div><span class="menu-price">£6.80</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">102</span><div><div class="menu-name-en">Beef with Mushrooms</div><div class="menu-name-zh">蘑菇牛</div></div></div><span class="menu-price">£6.60</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">103</span><div><div class="menu-name-en">Beef with Mixed Vegetables</div><div class="menu-name-zh">什菜牛</div></div></div><span class="menu-price">£6.60</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">104</span><div><div class="menu-name-en">Beef with Onions</div><div class="menu-name-zh">洋葱牛</div></div></div><span class="menu-price">£6.60</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">105</span><div><div class="menu-name-en">Beef with Cashewnuts</div><div class="menu-name-zh">腰果牛</div></div></div><span class="menu-price">£6.80</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">106</span><div><div class="menu-name-en">Beef with Black Bean Sauce</div><div class="menu-name-zh">豉汁牛</div></div></div><span class="menu-price">£6.80</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">107</span><div><div class="menu-name-en">Beef with Satay Sauce</div><div class="menu-name-zh">沙爹牛</div></div></div><span class="menu-price">£6.80</span></div>
-                </div>
-
-                <!-- 大虾 -->
-                <div class="menu-category" id="daxia">
-                    <h3>大虾 KING PRAWN</h3>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">108</span><div><div class="menu-name-en">King Prawn with Cashewnuts</div><div class="menu-name-zh">腰果大虾</div></div></div><span class="menu-price">£7.60</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">109</span><div><div class="menu-name-en">King Prawn with Mushrooms</div><div class="menu-name-zh">蘑菇大虾</div></div></div><span class="menu-price">£7.60</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">110</span><div><div class="menu-name-en">King Prawn with Mixed Vegetables</div><div class="menu-name-zh">什菜大虾</div></div></div><span class="menu-price">£7.60</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">111</span><div><div class="menu-name-en">King Prawn with Tomato</div><div class="menu-name-zh">番茄大虾</div></div></div><span class="menu-price">£7.60</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">112</span><div><div class="menu-name-en">King Prawn with Pineapple</div><div class="menu-name-zh">菠萝大虾</div></div></div><span class="menu-price">£7.60</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">113</span><div><div class="menu-name-en">King Prawn with Ginger & Spring Onions</div><div class="menu-name-zh">姜葱大虾</div></div></div><span class="menu-price">£7.60</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">114</span><div><div class="menu-name-en">King Prawn with Black Bean Sauce</div><div class="menu-name-zh">豉汁大虾</div></div></div><span class="menu-price">£7.60</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">115</span><div><div class="menu-name-en">King Prawn with Satay Sauce</div><div class="menu-name-zh">沙爹大虾</div></div></div><span class="menu-price">£7.60</span></div>
-                </div>
-
-                <!-- 鸭 -->
-                <div class="menu-category" id="ya">
-                    <h3>鸭 DUCK</h3>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">116</span><div><div class="menu-name-en">Roast Duck with Pineapple</div><div class="menu-name-zh">菠萝鸭</div></div></div><span class="menu-price">£7.50</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">117</span><div><div class="menu-name-en">Roast Duck with Onions</div><div class="menu-name-zh">洋葱鸭</div></div></div><span class="menu-price">£7.50</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">118</span><div><div class="menu-name-en">Roast Duck with Mushrooms</div><div class="menu-name-zh">蘑菇鸭</div></div></div><span class="menu-price">£7.50</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">119</span><div><div class="menu-name-en">Roast Duck with Mixed Vegetables</div><div class="menu-name-zh">什菜鸭</div></div></div><span class="menu-price">£7.50</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">120</span><div><div class="menu-name-en">Roast Duck Chinese Style</div><div class="menu-name-zh">中式鸭</div></div></div><span class="menu-price">£7.50</span></div>
-                </div>
-
-                <!-- 叉烧 -->
-                <div class="menu-category" id="charong">
-                    <h3>叉烧 ROAST PORK</h3>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">121</span><div><div class="menu-name-en">Roast Pork with Mushrooms</div><div class="menu-name-zh">蘑菇叉烧</div></div></div><span class="menu-price">£6.80</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">122</span><div><div class="menu-name-en">Roast Pork with Mixed Vegetables</div><div class="menu-name-zh">什菜叉烧</div></div></div><span class="menu-price">£6.80</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">123</span><div><div class="menu-name-en">Roast Pork with Onions</div><div class="menu-name-zh">洋葱叉烧</div></div></div><span class="menu-price">£6.80</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">124</span><div><div class="menu-name-en">Roast Pork Chinese Style</div><div class="menu-name-zh">中式叉烧</div></div></div><span class="menu-price">£6.80</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">125</span><div><div class="menu-name-en">Roast Pork with Satay Sauce</div><div class="menu-name-zh">沙爹叉烧</div></div></div><span class="menu-price">£6.80</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">126</span><div><div class="menu-name-en">Roast Pork with Cashewnuts</div><div class="menu-name-zh">腰果叉烧</div></div></div><span class="menu-price">£6.80</span></div>
-                </div>
-
-                <!-- 米饭 -->
-                <div class="menu-category" id="mifan">
-                    <h3>米饭 RICE</h3>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">127</span><div><div class="menu-name-en">Special Fried Rice (Dry)</div><div class="menu-name-zh">扬州炒饭</div></div></div><span class="menu-price">£6.20</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">128</span><div><div class="menu-name-en">Roasted Duck Fried Rice (Large)</div><div class="menu-name-zh">鸭炒饭 (大)</div></div></div><span class="menu-price">£7.50</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">129</span><div><div class="menu-name-en">Roasted Pork Fried Rice</div><div class="menu-name-zh">叉烧炒饭</div></div></div><span class="menu-price">£6.30</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">130</span><div><div class="menu-name-en">King Prawn Fried Rice</div><div class="menu-name-zh">大虾炒饭</div></div></div><span class="menu-price">£7.30</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">131</span><div><div class="menu-name-en">Chicken Fried Rice</div><div class="menu-name-zh">鸡炒饭</div></div></div><span class="menu-price">£5.90</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">132</span><div><div class="menu-name-en">Beef Fried Rice</div><div class="menu-name-zh">牛炒饭</div></div></div><span class="menu-price">£5.90</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">133</span><div><div class="menu-name-en">Singapore Fried Rice</div><div class="menu-name-zh">星洲炒饭</div></div></div><span class="menu-price">£6.80</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">134</span><div><div class="menu-name-en">Egg Fried Rice</div><div class="menu-name-zh">蛋炒饭</div></div></div><span class="menu-price">£4.40</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">135</span><div><div class="menu-name-en">Boiled Rice</div><div class="menu-name-zh">白饭</div></div></div><span class="menu-price">£4.00</span></div>
-                </div>
-
-                <!-- 炒面 -->
-                <div class="menu-category" id="chaomian">
-                    <h3>炒面 CHOW MEIN</h3>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">136</span><div><div class="menu-name-en">Singapore Chow Mein (Large)</div><div class="menu-name-zh">星洲炒面 (大)</div></div></div><span class="menu-price">£7.00</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">137</span><div><div class="menu-name-en">Special Chow Mein</div><div class="menu-name-zh">什锦炒面</div></div></div><span class="menu-price">£6.20</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">138</span><div><div class="menu-name-en">King Prawn Chow Mein</div><div class="menu-name-zh">大虾炒面</div></div></div><span class="menu-price">£6.80</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">139</span><div><div class="menu-name-en">Chicken Chow Mein</div><div class="menu-name-zh">鸡炒面</div></div></div><span class="menu-price">£6.20</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">140</span><div><div class="menu-name-en">Beef Chow Mein</div><div class="menu-name-zh">牛炒面</div></div></div><span class="menu-price">£6.20</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">141</span><div><div class="menu-name-en">Duck Chow Mein (Large)</div><div class="menu-name-zh">鸭炒面 (大)</div></div></div><span class="menu-price">£7.20</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">142</span><div><div class="menu-name-en">Mixed Vegetable Chow Mein</div><div class="menu-name-zh">什菜炒面</div></div></div><span class="menu-price">£5.30</span></div>
-                </div>
-
-                <!-- 米粉 -->
-                <div class="menu-category" id="mifen">
-                    <h3>米粉 VERMICELLI</h3>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">143</span><div><div class="menu-name-en">Singapore Rice Noodles</div><div class="menu-name-zh">星洲米粉</div></div></div><span class="menu-price">£7.60</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">144</span><div><div class="menu-name-en">King Prawn Rice Noodles</div><div class="menu-name-zh">大虾米粉</div></div></div><span class="menu-price">£7.60</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">145</span><div><div class="menu-name-en">Chicken Rice Noodles</div><div class="menu-name-zh">鸡米粉</div></div></div><span class="menu-price">£7.60</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">146</span><div><div class="menu-name-en">Beef Rice Noodles</div><div class="menu-name-zh">牛米粉</div></div></div><span class="menu-price">£7.60</span></div>
-                </div>
-
-                <!-- 蚝油 -->
-                <div class="menu-category" id="haoyou">
-                    <h3>蚝油 OYSTER SAUCE</h3>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">147</span><div><div class="menu-name-en">House Special Oyster Sauce</div><div class="menu-name-zh">召牌蚝油</div></div></div><span class="menu-price">£7.10</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">148</span><div><div class="menu-name-en">Beef Oyster Sauce</div><div class="menu-name-zh">蚝油牛</div></div></div><span class="menu-price">£6.50</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">149</span><div><div class="menu-name-en">Chicken Oyster Sauce</div><div class="menu-name-zh">蚝油鸡</div></div></div><span class="menu-price">£6.50</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">150</span><div><div class="menu-name-en">King Prawn Oyster Sauce</div><div class="menu-name-zh">蚝油大虾</div></div></div><span class="menu-price">£7.30</span></div>
-                </div>
-
-                <!-- 泰红 -->
-                <div class="menu-category" id="taihong">
-                    <h3>泰红 THAI RED CURRY</h3>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">151</span><div><div class="menu-name-en">House Special Thai Red Curry</div><div class="menu-name-zh">召牌泰红咖喱</div></div></div><span class="menu-price">£7.80</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">152</span><div><div class="menu-name-en">King Prawn Thai Red Curry</div><div class="menu-name-zh">泰红咖喱大虾</div></div></div><span class="menu-price">£7.80</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">153</span><div><div class="menu-name-en">Beef Thai Red Curry</div><div class="menu-name-zh">泰红咖喱牛</div></div></div><span class="menu-price">£6.80</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">154</span><div><div class="menu-name-en">Chicken Thai Red Curry</div><div class="menu-name-zh">泰红咖喱鸡</div></div></div><span class="menu-price">£6.80</span></div>
-                </div>
-
-                <!-- 泰绿 -->
-                <div class="menu-category" id="tailv">
-                    <h3>泰绿 THAI GREEN CURRY</h3>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">155</span><div><div class="menu-name-en">House Special Thai Green Curry</div><div class="menu-name-zh">召牌泰绿咖喱</div></div></div><span class="menu-price">£7.80</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">156</span><div><div class="menu-name-en">King Prawn Thai Green Curry</div><div class="menu-name-zh">泰绿咖喱大虾</div></div></div><span class="menu-price">£7.80</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">157</span><div><div class="menu-name-en">Beef Thai Green Curry</div><div class="menu-name-zh">泰绿咖喱牛</div></div></div><span class="menu-price">£6.80</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">158</span><div><div class="menu-name-en">Chicken Thai Green Curry</div><div class="menu-name-zh">泰绿咖喱鸡</div></div></div><span class="menu-price">£6.80</span></div>
-                </div>
-
-                <!-- 芙蓉 -->
-                <div class="menu-category" id="furong">
-                    <h3>芙蓉 FOO YUNG</h3>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">159</span><div><div class="menu-name-en">House Special Foo Yung</div><div class="menu-name-zh">召牌芙蓉</div></div></div><span class="menu-price">£6.80</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">160</span><div><div class="menu-name-en">King Prawn Foo Yung</div><div class="menu-name-zh">大虾芙蓉</div></div></div><span class="menu-price">£7.00</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">161</span><div><div class="menu-name-en">Chicken Foo Yung</div><div class="menu-name-zh">鸡芙蓉</div></div></div><span class="menu-price">£6.20</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">162</span><div><div class="menu-name-en">Mushroom Foo Yung</div><div class="menu-name-zh">蘑菇芙蓉</div></div></div><span class="menu-price">£5.40</span></div>
-                </div>
-
-                <!-- 特色 -->
-                <div class="menu-category" id="tese">
-                    <h3>特色 CHEF SPECIAL</h3>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">163</span><div><div class="menu-name-en">Shredded Chicken Spicy</div><div class="menu-name-zh">辣鸡丝</div></div></div><span class="menu-price">£6.80</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">164</span><div><div class="menu-name-en">Lemon Chicken</div><div class="menu-name-zh">柠檬鸡</div></div></div><span class="menu-price">£6.60</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">165</span><div><div class="menu-name-en">Orange Chicken</div><div class="menu-name-zh">橙汁鸡</div></div></div><span class="menu-price">£6.60</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">166</span><div><div class="menu-name-en">Plum Duck</div><div class="menu-name-zh">梅子鸭</div></div></div><span class="menu-price">£7.00</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">167</span><div><div class="menu-name-en">Double Happy</div><div class="menu-name-zh">双倍快乐</div></div></div><span class="menu-price">£7.90</span></div>
-                </div>
-
-                <!-- 英式 -->
-                <div class="menu-category" id="yingshi">
-                    <h3>英式 ENGLISH</h3>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">168</span><div><div class="menu-name-en">Roast Chicken</div><div class="menu-name-zh">烧鸡</div></div></div><span class="menu-price">£6.00</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">169</span><div><div class="menu-name-en">King Prawn Omelette</div><div class="menu-name-zh">大虾奄列</div></div></div><span class="menu-price">£6.70</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">170</span><div><div class="menu-name-en">Chicken Omelette</div><div class="menu-name-zh">鸡奄列</div></div></div><span class="menu-price">£6.00</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">171</span><div><div class="menu-name-en">Plain Omelette</div><div class="menu-name-zh">净奄列</div></div></div><span class="menu-price">£5.30</span></div>
-                </div>
-
-                <!-- 额外 -->
-                <div class="menu-category" id="ewai">
-                    <h3>额外 EXTRA</h3>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">172</span><div><div class="menu-name-en">Mixed Vegetables</div><div class="menu-name-zh">什菜</div></div></div><span class="menu-price">£4.70</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">173</span><div><div class="menu-name-en">White Mushrooms</div><div class="menu-name-zh">白蘑菇</div></div></div><span class="menu-price">£4.70</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">174</span><div><div class="menu-name-en">Beansprouts</div><div class="menu-name-zh">芽菜</div></div></div><span class="menu-price">£4.70</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">175</span><div><div class="menu-name-en">Chips</div><div class="menu-name-zh">薯条</div></div></div><span class="menu-price">£3.10</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">176</span><div><div class="menu-name-en">Prawn Crackers</div><div class="menu-name-zh">虾片</div></div></div><span class="menu-price">£2.90</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">177</span><div><div class="menu-name-en">Curry Sauce</div><div class="menu-name-zh">咖喱汁</div></div></div><span class="menu-price">£2.50</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">178</span><div><div class="menu-name-en">Satay Sauce</div><div class="menu-name-zh">沙爹汁</div></div></div><span class="menu-price">£2.80</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">179</span><div><div class="menu-name-en">Sweet & Sour Sauce</div><div class="menu-name-zh">酸甜汁</div></div></div><span class="menu-price">£2.50</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">180</span><div><div class="menu-name-en">BBQ Sauce</div><div class="menu-name-zh">烧烤汁</div></div></div><span class="menu-price">£2.50</span></div>
-                </div>
-
-                <!-- 饮品 -->
-                <div class="menu-category" id="yinpin">
-                    <h3>饮品 DRINKS</h3>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">181</span><div><div class="menu-name-en">Coke (Bottle 1.5L)</div><div class="menu-name-zh">可乐 (瓶)</div></div></div><span class="menu-price">£2.50</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">182</span><div><div class="menu-name-en">Diet Coke (Bottle 1.5L)</div><div class="menu-name-zh">健怡可乐 (瓶)</div></div></div><span class="menu-price">£2.50</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">183</span><div><div class="menu-name-en">Coke (Can)</div><div class="menu-name-zh">可乐 (罐)</div></div></div><span class="menu-price">£1.10</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">184</span><div><div class="menu-name-en">Diet Coke (Can)</div><div class="menu-name-zh">健怡可乐 (罐)</div></div></div><span class="menu-price">£1.10</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">185</span><div><div class="menu-name-en">7up (Can)</div><div class="menu-name-zh">七喜 (罐)</div></div></div><span class="menu-price">£1.10</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">186</span><div><div class="menu-name-en">Fanta (Can)</div><div class="menu-name-zh">芬达 (罐)</div></div></div><span class="menu-price">£1.10</span></div>
-                </div>
-
-                <!-- 套餐 -->
-                <div class="menu-category" id="taocan">
-                    <h3>套餐 SET DINNERS</h3>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">187</span><div><div class="menu-name-en">A Set Meal For 1</div><div class="menu-name-zh">A餐 1人</div></div></div><span class="menu-price">£12.30</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">188</span><div><div class="menu-name-en">B Set Meal For 1</div><div class="menu-name-zh">B餐 1人</div></div></div><span class="menu-price">£12.30</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">189</span><div><div class="menu-name-en">S1 2 Persons</div><div class="menu-name-zh">S1 2人餐</div></div></div><span class="menu-price">£20.00</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">190</span><div><div class="menu-name-en">S1 3 Persons</div><div class="menu-name-zh">S1 3人餐</div></div></div><span class="menu-price">£30.00</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">191</span><div><div class="menu-name-en">S1 4 Persons</div><div class="menu-name-zh">S1 4人餐</div></div></div><span class="menu-price">£40.00</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">192</span><div><div class="menu-name-en">S2 2 Persons</div><div class="menu-name-zh">S2 2人餐</div></div></div><span class="menu-price">£24.00</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">193</span><div><div class="menu-name-en">S2 3 Persons</div><div class="menu-name-zh">S2 3人餐</div></div></div><span class="menu-price">£36.00</span></div>
-                    <div class="menu-item"><div class="menu-item-left"><span class="menu-number">194</span><div><div class="menu-name-en">S2 4 Persons</div><div class="menu-name-zh">S2 4人餐</div></div></div><span class="menu-price">£48.00</span></div>
-                </div>
-            </div>
+            <div class="menu-tabs" id="menuTabs"></div>
+            <div class="menu-section" id="menuSection"></div>
         </section>
 
         <!-- 视频区域 -->
@@ -1016,7 +617,320 @@
     </div>
 
     <script>
+        // ==================== 菜单数据 JSON 格式 ====================
+        const menuData = {
+            categories: [
+                { id: "toupan", name: "头盘", nameEn: "APPETISERS", items: [
+                    { number: "001", nameEn: "Mixed Appetisers", nameZh: "什拼", price: "£10.50" },
+                    { number: "002", nameEn: "Seaweed Special", nameZh: "羊海草", price: "£10.50" },
+                    { number: "003", nameEn: "Crispy Aromatic Duck Quarter", nameZh: "香酥甲1/4", price: "£11.50" },
+                    { number: "004", nameEn: "Crispy Aromatic Duck Half", nameZh: "香酥甲1/2", price: "£20.00" },
+                    { number: "005", nameEn: "Peking Crispy Duck Quarter", nameZh: "北京烤甲1/4", price: "£12.50" },
+                    { number: "006", nameEn: "Peking Crispy Duck Half", nameZh: "北京烤甲1/2", price: "£23.00" },
+                    { number: "007", nameEn: "Crispy Seaweed", nameZh: "海草", price: "£5.00" },
+                    { number: "008", nameEn: "Sesame Prawn on Toast", nameZh: "虾多士", price: "£6.00" },
+                    { number: "009", nameEn: "Spring Roll", nameZh: "春卷", price: "£3.20" },
+                    { number: "010", nameEn: "Vegetarian Mini Rolls (6)", nameZh: "斋春卷 (6)", price: "£4.50" },
+                    { number: "011", nameEn: "Deep Fried Squid", nameZh: "炸鱿鱼", price: "£6.50" },
+                    { number: "012", nameEn: "Capital Spare Ribs of Pork", nameZh: "京骨", price: "£7.20" },
+                    { number: "013", nameEn: "Spare Ribs with BBQ Sauce", nameZh: "BBQ骨", price: "£7.00" },
+                    { number: "014", nameEn: "Spare Ribs with Sweet & Sour Sauce", nameZh: "古老骨", price: "£7.00" },
+                    { number: "015", nameEn: "Fried Spare Ribs (Dry)", nameZh: "干骨", price: "£6.50" },
+                    { number: "016", nameEn: "Fried Chicken Wings (Dry)", nameZh: "干介翅", price: "£6.00" },
+                    { number: "017", nameEn: "Golden Butterfly King Prawns", nameZh: "蝴蝶大虾", price: "£7.00" },
+                    { number: "018", nameEn: "Fried Chicken in Breadcrumbs", nameZh: "炸介", price: "£7.00" },
+                    { number: "019", nameEn: "Chicken Satay on Skewer", nameZh: "沙爹介串", price: "£7.00" },
+                    { number: "020", nameEn: "Deep Fried Stuffed Crab Claws (4)", nameZh: "炸蟹爪 (4)", price: "£5.30" },
+                    { number: "021", nameEn: "Crispy Curry Puffs (10)", nameZh: "咖喱角 (10)", price: "£4.80" }
+                ]},
+                { id: "tang", name: "汤", nameEn: "SOUPS", items: [
+                    { number: "022", nameEn: "Hot & Sour Soup", nameZh: "酸辣汤", price: "£4.50" },
+                    { number: "023", nameEn: "Chicken & Sweet Corn Soup", nameZh: "鸡米汤", price: "£3.90" },
+                    { number: "024", nameEn: "Chicken & Mushroom Soup", nameZh: "蘑菇鸡汤", price: "£3.90" },
+                    { number: "025", nameEn: "Chicken & Noodle Soup", nameZh: "鸡面汤", price: "£3.90" },
+                    { number: "026", nameEn: "Crab Meat & Sweet Corn Soup", nameZh: "蟹米汤", price: "£4.30" },
+                    { number: "027", nameEn: "Won Ton Soup", nameZh: "云吞汤", price: "£4.50" }
+                ]},
+                { id: "zhaopai", name: "召牌", nameEn: "HOUSE SPECIAL", items: [
+                    { number: "028", nameEn: "House Special with Green Peppers", nameZh: "召牌绿椒", price: "£7.30" },
+                    { number: "029", nameEn: "House Special with Cashewnuts", nameZh: "召牌夭果", price: "£7.30" },
+                    { number: "030", nameEn: "House Special with Mushrooms", nameZh: "召牌毛古", price: "£7.30" },
+                    { number: "031", nameEn: "House Special with Mixed Vegetables", nameZh: "召牌什才", price: "£7.30" },
+                    { number: "032", nameEn: "House Special with Ginger & Spring Onions", nameZh: "召牌姜冲", price: "£7.30" },
+                    { number: "033", nameEn: "House Special with Black Bean Sauce", nameZh: "召牌豉汁", price: "£7.30" },
+                    { number: "034", nameEn: "House Special with Yellow Bean Sauce", nameZh: "召牌酱爆", price: "£7.30" },
+                    { number: "035", nameEn: "House Special with Satay Sauce", nameZh: "召牌沙爹", price: "£7.30" }
+                ]},
+                { id: "tuijian", name: "推荐", nameEn: "CHEF'S SPECIAL", items: [
+                    { number: "036", nameEn: "Tofu in Black Bean Sauce", nameZh: "豉汁豆付", price: "£6.30" },
+                    { number: "037", nameEn: "Tofu with Hot Chilli", nameZh: "辣豆付", price: "£6.30" },
+                    { number: "038", nameEn: "Salt & Pepper Tofu", nameZh: "召炎豆付", price: "£6.30" },
+                    { number: "039", nameEn: "Tofu with Mixed Vegetables", nameZh: "什才豆付", price: "£6.30" },
+                    { number: "040", nameEn: "Steamed Pork Dumplings (6)", nameZh: "蒸朱肉饺子", price: "£5.50" },
+                    { number: "041", nameEn: "Pan Fried Pork Dumplings(6)", nameZh: "炸朱肉饺子", price: "£5.50" }
+                ]},
+                { id: "gongbao", name: "宫保", nameEn: "KUNG PO", items: [
+                    { number: "042", nameEn: "House Special with Kung Po Sauce", nameZh: "召牌宫保", price: "£7.30" },
+                    { number: "043", nameEn: "Kung Po King Prawn", nameZh: "宫保大虾", price: "£7.70" },
+                    { number: "044", nameEn: "Kung Po Chicken", nameZh: "宫保鸡", price: "£7.00" },
+                    { number: "045", nameEn: "Kung Po Beef", nameZh: "宫保牛", price: "£7.00" },
+                    { number: "046", nameEn: "Kung Po Pork", nameZh: "宫保猪", price: "£7.00" }
+                ]},
+                { id: "gulao", name: "古老", nameEn: "SWEET & SOUR", items: [
+                    { number: "047", nameEn: "Sweet & Sour King Prawn Balls(10)", nameZh: "古虾球（10）", price: "£7.20" },
+                    { number: "048", nameEn: "Sweet & Sour Chicken Balls(10)", nameZh: "古鸡球（10）", price: "£6.20" },
+                    { number: "049", nameEn: "Sweet & Sour Pork Balls (12)", nameZh: "古猪肉球（12）", price: "£6.20" },
+                    { number: "050", nameEn: "Sweet & Sour King Prawn(Hong Kong Style)", nameZh: "中古大虾", price: "£7.20" },
+                    { number: "051", nameEn: "Sweet & Sour Chicken (Hong Kong Style)", nameZh: "中古鸡", price: "£6.80" },
+                    { number: "052", nameEn: "Sweet & Sour Pork (Hong Kong Style)", nameZh: "中古猪", price: "£6.80" },
+                    { number: "053", nameEn: "Sweet & Sour Mixed Vegetables", nameZh: "古什菜", price: "£5.50" }
+                ]},
+                { id: "kali", name: "咖喱", nameEn: "CURRY", items: [
+                    { number: "054", nameEn: "Special Curry", nameZh: "召牌咖喱", price: "£7.20" },
+                    { number: "055", nameEn: "King Prawn Curry", nameZh: "咖喱大虾", price: "£7.20" },
+                    { number: "056", nameEn: "Prawn Curry", nameZh: "咖喱虾", price: "£6.40" },
+                    { number: "057", nameEn: "Chicken Curry", nameZh: "咖喱鸡", price: "£6.20" },
+                    { number: "058", nameEn: "Beef Curry", nameZh: "咖喱牛", price: "£6.20" },
+                    { number: "059", nameEn: "Pork Curry", nameZh: "咖喱叉烧", price: "£6.20" },
+                    { number: "060", nameEn: "Mushroom Curry", nameZh: "咖喱毛古", price: "£5.50" },
+                    { number: "061", nameEn: "Mixed Vegetable Curry", nameZh: "咖喱什菜", price: "£5.50" }
+                ]},
+                { id: "shishui", name: "什水", nameEn: "CHOP SUEY", items: [
+                    { number: "062", nameEn: "Special Chop Suey", nameZh: "召牌什水", price: "£6.50" },
+                    { number: "063", nameEn: "Mushroom Chop Suey", nameZh: "毛古什水", price: "£5.30" },
+                    { number: "064", nameEn: "Prawn Chop Suey", nameZh: "虾什水", price: "£5.90" },
+                    { number: "065", nameEn: "Beef Chop Suey", nameZh: "牛什水", price: "£5.90" },
+                    { number: "066", nameEn: "Roast Pork Chop Suey", nameZh: "叉烧什水", price: "£5.90" },
+                    { number: "067", nameEn: "King Prawn Chop Suey", nameZh: "大虾什水", price: "£7.30" },
+                    { number: "068", nameEn: "Chicken Chop Suey", nameZh: "鸡什水", price: "£6.10" }
+                ]},
+                { id: "sichuan", name: "四川", nameEn: "SZECHUAN", items: [
+                    { number: "069", nameEn: "House Special with Szechuan Sauce", nameZh: "召牌四川", price: "£7.50" },
+                    { number: "070", nameEn: "King Prawn with Szechuan Sauce", nameZh: "四川大虾", price: "£7.30" },
+                    { number: "071", nameEn: "Beef with Szechuan Sauce", nameZh: "四川牛", price: "£6.30" },
+                    { number: "072", nameEn: "Chicken with Szechuan Sauce", nameZh: "四川鸡", price: "£6.30" },
+                    { number: "073", nameEn: "Roast Pork with Szechuan Sauce", nameZh: "四川叉烧", price: "£6.30" },
+                    { number: "074", nameEn: "Roast Duck with Szechuan Sauce", nameZh: "四川鸭", price: "£7.70" }
+                ]},
+                { id: "suanla", name: "蒜辣", nameEn: "GARLIC CHILLI", items: [
+                    { number: "075", nameEn: "House Special with Garlic & Chilli", nameZh: "召牌蒜辣", price: "£7.50" },
+                    { number: "076", nameEn: "King Prawn with Garlic & Chilli", nameZh: "蒜辣大虾", price: "£7.30" },
+                    { number: "077", nameEn: "Beef with Garlic & Chilli", nameZh: "蒜辣牛", price: "£6.30" },
+                    { number: "078", nameEn: "Chicken with Garlic & Chilli", nameZh: "蒜辣鸡", price: "£6.30" },
+                    { number: "079", nameEn: "Roast Pork with Garlic & Chilli", nameZh: "蒜辣叉烧", price: "£6.30" },
+                    { number: "080", nameEn: "Roast Duck with Garlic & Chilli", nameZh: "蒜辣鸭", price: "£7.70" }
+                ]},
+                { id: "shanghai", name: "上海", nameEn: "SHANGHAI", items: [
+                    { number: "081", nameEn: "House Special Shanghai Style", nameZh: "召牌上海", price: "£7.60" },
+                    { number: "082", nameEn: "King Prawn Shanghai Style", nameZh: "上海大虾", price: "£7.50" },
+                    { number: "083", nameEn: "Beef Shanghai Style", nameZh: "上海牛", price: "£6.50" },
+                    { number: "084", nameEn: "Chicken Shanghai Style", nameZh: "上海鸡", price: "£6.50" },
+                    { number: "085", nameEn: "Pork Shanghai Style", nameZh: "上海猪", price: "£6.50" },
+                    { number: "086", nameEn: "Duck Shanghai Style", nameZh: "上海鸭", price: "£7.60" }
+                ]},
+                { id: "zhaoyan", name: "召炎", nameEn: "SALT & PEPPER", items: [
+                    { number: "087", nameEn: "Salt & Pepper Squid", nameZh: "召炎鱿鱼", price: "£7.00" },
+                    { number: "088", nameEn: "Salt & Pepper Ribs", nameZh: "召炎骨", price: "£7.00" },
+                    { number: "089", nameEn: "Salt & Pepper Chicken", nameZh: "召炎鸡", price: "£6.70" },
+                    { number: "090", nameEn: "Salt & Pepper Chicken Wings", nameZh: "召炎鸡翅", price: "£6.10" },
+                    { number: "091", nameEn: "Salt & Pepper King Prawn", nameZh: "召炎大虾", price: "£7.50" }
+                ]},
+                { id: "ji", name: "鸡", nameEn: "CHICKEN", items: [
+                    { number: "092", nameEn: "Roast Chicken (Chinese Style)", nameZh: "中式鸡", price: "£6.20" },
+                    { number: "093", nameEn: "Chicken with Green Peppers", nameZh: "绿椒鸡", price: "£6.40" },
+                    { number: "094", nameEn: "Chicken with Cashewnuts", nameZh: "腰果鸡", price: "£6.80" },
+                    { number: "095", nameEn: "Chicken with Pineapple", nameZh: "菠萝鸡", price: "£6.20" },
+                    { number: "096", nameEn: "Chicken with Mushrooms", nameZh: "蘑菇鸡", price: "£6.20" },
+                    { number: "097", nameEn: "Chicken with Mixed Vegetables", nameZh: "什菜鸡", price: "£6.30" },
+                    { number: "098", nameEn: "Chicken with Ginger & Spring Onions", nameZh: "姜葱鸡", price: "£6.60" },
+                    { number: "099", nameEn: "Chicken with Black Bean Sauce", nameZh: "豉汁鸡", price: "£6.60" },
+                    { number: "100", nameEn: "Chicken with Satay Sauce", nameZh: "沙爹鸡", price: "£6.80" }
+                ]},
+                { id: "niu", name: "牛", nameEn: "BEEF", items: [
+                    { number: "101", nameEn: "Beef with Ginger & Spring Onions", nameZh: "姜葱牛", price: "£6.80" },
+                    { number: "102", nameEn: "Beef with Mushrooms", nameZh: "蘑菇牛", price: "£6.60" },
+                    { number: "103", nameEn: "Beef with Mixed Vegetables", nameZh: "什菜牛", price: "£6.60" },
+                    { number: "104", nameEn: "Beef with Onions", nameZh: "洋葱牛", price: "£6.60" },
+                    { number: "105", nameEn: "Beef with Cashewnuts", nameZh: "腰果牛", price: "£6.80" },
+                    { number: "106", nameEn: "Beef with Black Bean Sauce", nameZh: "豉汁牛", price: "£6.80" },
+                    { number: "107", nameEn: "Beef with Satay Sauce", nameZh: "沙爹牛", price: "£6.80" }
+                ]},
+                { id: "daxia", name: "大虾", nameEn: "KING PRAWN", items: [
+                    { number: "108", nameEn: "King Prawn with Cashewnuts", nameZh: "腰果大虾", price: "£7.60" },
+                    { number: "109", nameEn: "King Prawn with Mushrooms", nameZh: "蘑菇大虾", price: "£7.60" },
+                    { number: "110", nameEn: "King Prawn with Mixed Vegetables", nameZh: "什菜大虾", price: "£7.60" },
+                    { number: "111", nameEn: "King Prawn with Tomato", nameZh: "番茄大虾", price: "£7.60" },
+                    { number: "112", nameEn: "King Prawn with Pineapple", nameZh: "菠萝大虾", price: "£7.60" },
+                    { number: "113", nameEn: "King Prawn with Ginger & Spring Onions", nameZh: "姜葱大虾", price: "£7.60" },
+                    { number: "114", nameEn: "King Prawn with Black Bean Sauce", nameZh: "豉汁大虾", price: "£7.60" },
+                    { number: "115", nameEn: "King Prawn with Satay Sauce", nameZh: "沙爹大虾", price: "£7.60" }
+                ]},
+                { id: "ya", name: "鸭", nameEn: "DUCK", items: [
+                    { number: "116", nameEn: "Roast Duck with Pineapple", nameZh: "菠萝鸭", price: "£7.50" },
+                    { number: "117", nameEn: "Roast Duck with Onions", nameZh: "洋葱鸭", price: "£7.50" },
+                    { number: "118", nameEn: "Roast Duck with Mushrooms", nameZh: "蘑菇鸭", price: "£7.50" },
+                    { number: "119", nameEn: "Roast Duck with Mixed Vegetables", nameZh: "什菜鸭", price: "£7.50" },
+                    { number: "120", nameEn: "Roast Duck Chinese Style", nameZh: "中式鸭", price: "£7.50" }
+                ]},
+                { id: "charong", name: "叉烧", nameEn: "ROAST PORK", items: [
+                    { number: "121", nameEn: "Roast Pork with Mushrooms", nameZh: "蘑菇叉烧", price: "£6.80" },
+                    { number: "122", nameEn: "Roast Pork with Mixed Vegetables", nameZh: "什菜叉烧", price: "£6.80" },
+                    { number: "123", nameEn: "Roast Pork with Onions", nameZh: "洋葱叉烧", price: "£6.80" },
+                    { number: "124", nameEn: "Roast Pork Chinese Style", nameZh: "中式叉烧", price: "£6.80" },
+                    { number: "125", nameEn: "Roast Pork with Satay Sauce", nameZh: "沙爹叉烧", price: "£6.80" },
+                    { number: "126", nameEn: "Roast Pork with Cashewnuts", nameZh: "腰果叉烧", price: "£6.80" }
+                ]},
+                { id: "mifan", name: "米饭", nameEn: "RICE", items: [
+                    { number: "127", nameEn: "Special Fried Rice (Dry)", nameZh: "扬州炒饭", price: "£6.20" },
+                    { number: "128", nameEn: "Roasted Duck Fried Rice (Large)", nameZh: "鸭炒饭 (大)", price: "£7.50" },
+                    { number: "129", nameEn: "Roasted Pork Fried Rice", nameZh: "叉烧炒饭", price: "£6.30" },
+                    { number: "130", nameEn: "King Prawn Fried Rice", nameZh: "大虾炒饭", price: "£7.30" },
+                    { number: "131", nameEn: "Chicken Fried Rice", nameZh: "鸡炒饭", price: "£5.90" },
+                    { number: "132", nameEn: "Beef Fried Rice", nameZh: "牛炒饭", price: "£5.90" },
+                    { number: "133", nameEn: "Singapore Fried Rice", nameZh: "星洲炒饭", price: "£6.80" },
+                    { number: "134", nameEn: "Egg Fried Rice", nameZh: "蛋炒饭", price: "£4.40" },
+                    { number: "135", nameEn: "Boiled Rice", nameZh: "白饭", price: "£4.00" }
+                ]},
+                { id: "chaomian", name: "炒面", nameEn: "CHOW MEIN", items: [
+                    { number: "136", nameEn: "Singapore Chow Mein (Large)", nameZh: "星洲炒面 (大)", price: "£7.00" },
+                    { number: "137", nameEn: "Special Chow Mein", nameZh: "什锦炒面", price: "£6.20" },
+                    { number: "138", nameEn: "King Prawn Chow Mein", nameZh: "大虾炒面", price: "£6.80" },
+                    { number: "139", nameEn: "Chicken Chow Mein", nameZh: "鸡炒面", price: "£6.20" },
+                    { number: "140", nameEn: "Beef Chow Mein", nameZh: "牛炒面", price: "£6.20" },
+                    { number: "141", nameEn: "Duck Chow Mein (Large)", nameZh: "鸭炒面 (大)", price: "£7.20" },
+                    { number: "142", nameEn: "Mixed Vegetable Chow Mein", nameZh: "什菜炒面", price: "£5.30" }
+                ]},
+                { id: "mifen", name: "米粉", nameEn: "VERMICELLI", items: [
+                    { number: "143", nameEn: "Singapore Rice Noodles", nameZh: "星洲米粉", price: "£7.60" },
+                    { number: "144", nameEn: "King Prawn Rice Noodles", nameZh: "大虾米粉", price: "£7.60" },
+                    { number: "145", nameEn: "Chicken Rice Noodles", nameZh: "鸡米粉", price: "£7.60" },
+                    { number: "146", nameEn: "Beef Rice Noodles", nameZh: "牛米粉", price: "£7.60" }
+                ]},
+                { id: "haoyou", name: "蚝油", nameEn: "OYSTER SAUCE", items: [
+                    { number: "147", nameEn: "House Special Oyster Sauce", nameZh: "召牌蚝油", price: "£7.10" },
+                    { number: "148", nameEn: "Beef Oyster Sauce", nameZh: "蚝油牛", price: "£6.50" },
+                    { number: "149", nameEn: "Chicken Oyster Sauce", nameZh: "蚝油鸡", price: "£6.50" },
+                    { number: "150", nameEn: "King Prawn Oyster Sauce", nameZh: "蚝油大虾", price: "£7.30" }
+                ]},
+                { id: "taihong", name: "泰红", nameEn: "THAI RED CURRY", items: [
+                    { number: "151", nameEn: "House Special Thai Red Curry", nameZh: "召牌泰红咖喱", price: "£7.80" },
+                    { number: "152", nameEn: "King Prawn Thai Red Curry", nameZh: "泰红咖喱大虾", price: "£7.80" },
+                    { number: "153", nameEn: "Beef Thai Red Curry", nameZh: "泰红咖喱牛", price: "£6.80" },
+                    { number: "154", nameEn: "Chicken Thai Red Curry", nameZh: "泰红咖喱鸡", price: "£6.80" }
+                ]},
+                { id: "tailv", name: "泰绿", nameEn: "THAI GREEN CURRY", items: [
+                    { number: "155", nameEn: "House Special Thai Green Curry", nameZh: "召牌泰绿咖喱", price: "£7.80" },
+                    { number: "156", nameEn: "King Prawn Thai Green Curry", nameZh: "泰绿咖喱大虾", price: "£7.80" },
+                    { number: "157", nameEn: "Beef Thai Green Curry", nameZh: "泰绿咖喱牛", price: "£6.80" },
+                    { number: "158", nameEn: "Chicken Thai Green Curry", nameZh: "泰绿咖喱鸡", price: "£6.80" }
+                ]},
+                { id: "furong", name: "芙蓉", nameEn: "FOO YUNG", items: [
+                    { number: "159", nameEn: "House Special Foo Yung", nameZh: "召牌芙蓉", price: "£6.80" },
+                    { number: "160", nameEn: "King Prawn Foo Yung", nameZh: "大虾芙蓉", price: "£7.00" },
+                    { number: "161", nameEn: "Chicken Foo Yung", nameZh: "鸡芙蓉", price: "£6.20" },
+                    { number: "162", nameEn: "Mushroom Foo Yung", nameZh: "蘑菇芙蓉", price: "£5.40" }
+                ]},
+                { id: "tese", name: "特色", nameEn: "CHEF SPECIAL", items: [
+                    { number: "163", nameEn: "Shredded Chicken Spicy", nameZh: "辣鸡丝", price: "£6.80" },
+                    { number: "164", nameEn: "Lemon Chicken", nameZh: "柠檬鸡", price: "£6.60" },
+                    { number: "165", nameEn: "Orange Chicken", nameZh: "橙汁鸡", price: "£6.60" },
+                    { number: "166", nameEn: "Plum Duck", nameZh: "梅子鸭", price: "£7.00" },
+                    { number: "167", nameEn: "Double Happy", nameZh: "双倍快乐", price: "£7.90" }
+                ]},
+                { id: "yingshi", name: "英式", nameEn: "ENGLISH", items: [
+                    { number: "168", nameEn: "Roast Chicken", nameZh: "烧鸡", price: "£6.00" },
+                    { number: "169", nameEn: "King Prawn Omelette", nameZh: "大虾奄列", price: "£6.70" },
+                    { number: "170", nameEn: "Chicken Omelette", nameZh: "鸡奄列", price: "£6.00" },
+                    { number: "171", nameEn: "Plain Omelette", nameZh: "净奄列", price: "£5.30" }
+                ]},
+                { id: "ewai", name: "额外", nameEn: "EXTRA", items: [
+                    { number: "172", nameEn: "Mixed Vegetables", nameZh: "什菜", price: "£4.70" },
+                    { number: "173", nameEn: "White Mushrooms", nameZh: "白蘑菇", price: "£4.70" },
+                    { number: "174", nameEn: "Beansprouts", nameZh: "芽菜", price: "£4.70" },
+                    { number: "175", nameEn: "Chips", nameZh: "薯条", price: "£3.10" },
+                    { number: "176", nameEn: "Prawn Crackers", nameZh: "虾片", price: "£2.90" },
+                    { number: "177", nameEn: "Curry Sauce", nameZh: "咖喱汁", price: "£2.50" },
+                    { number: "178", nameEn: "Satay Sauce", nameZh: "沙爹汁", price: "£2.80" },
+                    { number: "179", nameEn: "Sweet & Sour Sauce", nameZh: "酸甜汁", price: "£2.50" },
+                    { number: "180", nameEn: "BBQ Sauce", nameZh: "烧烤汁", price: "£2.50" }
+                ]},
+                { id: "yinpin", name: "饮品", nameEn: "DRINKS", items: [
+                    { number: "181", nameEn: "Coke (Bottle 1.5L)", nameZh: "可乐 (瓶)", price: "£2.50" },
+                    { number: "182", nameEn: "Diet Coke (Bottle 1.5L)", nameZh: "健怡可乐 (瓶)", price: "£2.50" },
+                    { number: "183", nameEn: "Coke (Can)", nameZh: "可乐 (罐)", price: "£1.10" },
+                    { number: "184", nameEn: "Diet Coke (Can)", nameZh: "健怡可乐 (罐)", price: "£1.10" },
+                    { number: "185", nameEn: "7up (Can)", nameZh: "七喜 (罐)", price: "£1.10" },
+                    { number: "186", nameEn: "Fanta (Can)", nameZh: "芬达 (罐)", price: "£1.10" }
+                ]},
+                { id: "taocan", name: "套餐", nameEn: "SET DINNERS", items: [
+                    { number: "187", nameEn: "A Set Meal For 1", nameZh: "A餐 1人", price: "£12.30" },
+                    { number: "188", nameEn: "B Set Meal For 1", nameZh: "B餐 1人", price: "£12.30" },
+                    { number: "189", nameEn: "S1 2 Persons", nameZh: "S1 2人餐", price: "£20.00" },
+                    { number: "190", nameEn: "S1 3 Persons", nameZh: "S1 3人餐", price: "£30.00" },
+                    { number: "191", nameEn: "S1 4 Persons", nameZh: "S1 4人餐", price: "£40.00" },
+                    { number: "192", nameEn: "S2 2 Persons", nameZh: "S2 2人餐", price: "£24.00" },
+                    { number: "193", nameEn: "S2 3 Persons", nameZh: "S2 3人餐", price: "£36.00" },
+                    { number: "194", nameEn: "S2 4 Persons", nameZh: "S2 4人餐", price: "£48.00" }
+                ]}
+            ]
+        };
+
+        // 渲染菜单
+        function renderMenu() {
+            const menuTabs = document.getElementById('menuTabs');
+            const menuSection = document.getElementById('menuSection');
+            
+            // 渲染分类按钮
+            menuTabs.innerHTML = menuData.categories.map((cat, index) => 
+                `<button class="menu-tab ${index === 0 ? 'active' : ''}" data-category="${cat.id}">${cat.name}<span>${cat.nameEn}</span></button>`
+            ).join('');
+            
+            // 渲染菜单内容
+            menuSection.innerHTML = menuData.categories.map(cat => `
+                <div class="menu-category" id="${cat.id}">
+                    <h3>${cat.name} ${cat.nameEn}</h3>
+                    ${cat.items.map(item => `
+                        <div class="menu-item">
+                            <div class="menu-item-left">
+                                <span class="menu-number">${item.number}</span>
+                                <div>
+                                    <div class="menu-name-en">${item.nameEn}</div>
+                                    <div class="menu-name-zh">${item.nameZh}</div>
+                                </div>
+                            </div>
+                            <span class="menu-price">${item.price}</span>
+                        </div>
+                    `).join('')}
+                </div>
+            `).join('');
+            
+            // 绑定菜单点击事件
+            const tabs = document.querySelectorAll('.menu-tab');
+            const categories = document.querySelectorAll('.menu-category');
+            
+            function showCategory(categoryId) {
+                categories.forEach(cat => cat.classList.remove('active-category'));
+                const targetCategory = document.getElementById(categoryId);
+                if (targetCategory) targetCategory.classList.add('active-category');
+            }
+            
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    tabs.forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+                    showCategory(this.getAttribute('data-category'));
+                });
+            });
+            
+            // 默认显示第一个分类
+            showCategory(menuData.categories[0].id);
+        }
+        
+        // 页面加载完成后执行
         document.addEventListener('DOMContentLoaded', function() {
+            // 渲染菜单
+            renderMenu();
+            
             // 轮播图功能
             const track = document.getElementById('carouselTrack');
             const slides = document.querySelectorAll('.carousel-slide');
@@ -1042,27 +956,6 @@
                 carousel.addEventListener('mouseenter', () => clearInterval(autoPlay));
                 carousel.addEventListener('mouseleave', () => { autoPlay = setInterval(() => { currentIndex = (currentIndex + 1) % slideCount; updateCarousel(); }, 5000); });
             }
-            
-            // 菜单分类导航功能
-            const tabs = document.querySelectorAll('.menu-tab');
-            const categories = document.querySelectorAll('.menu-category');
-            
-            function showCategory(categoryId) {
-                categories.forEach(cat => cat.classList.remove('active-category'));
-                const targetCategory = document.getElementById(categoryId);
-                if (targetCategory) targetCategory.classList.add('active-category');
-            }
-            
-            tabs.forEach(tab => {
-                tab.addEventListener('click', function() {
-                    tabs.forEach(t => t.classList.remove('active'));
-                    this.classList.add('active');
-                    showCategory(this.getAttribute('data-category'));
-                });
-            });
-            
-            // 默认显示头盘
-            showCategory('toupan');
             
             // 图片放大功能
             const modal = document.getElementById('imageModal');
